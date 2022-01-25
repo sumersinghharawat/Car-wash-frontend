@@ -1,0 +1,19 @@
+<div class="w-100 vh-100 bg-white d-flex align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class=" h-50 col-12 text-center">
+                <h1 class="font-primary">RJ19 Car Wash</h1>
+            </div>
+            <div class="md-3 h-50 mx-auto text-center p-5">
+                <form [formGroup]="booking" (ngSubmit)="show()">
+                    <div class="form-group">
+                        <label>Enter your phone number</label>
+                        <input type="phone" class="form-control" formControlName="phone" placeholder="Enter Phone Number">
+                    </div>
+                    <div [class]="' text-'+validationFieldType+' col-12'" *ngIf="validationField"> {{ validationFieldMessage }} </div>
+                    <button class="btn btn1 text-white">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class=" h-50 col-12 text-center">
+            <h1 class="font-primary">RJ19 Car Wash<br> Transaction</h1>
+        </div>
+    </div>
+    <div class="row" *ngIf="warning">
+        <div class="col-12 text-center">
+            {{ warning }}
+        </div>
+    </div>
+    <div class="row align-items-center shadow-sm p-3 mb-5 bg-white rounded" *ngFor="let Transaction of Transactions">
+        <div class="col-3">
+            <img [src]="apiUrl + Transaction.service_id.service_image" class="img-fluid"/>
+        </div>
+        <div class="col-7 d-flex flex-column pt-2">
+            <h4>{{ Transaction.service_id.name }}</h4>
+            <h6 class="text-success" *ngIf="Transaction.status==1">Completed</h6>
+            <h6 class="text-danger" *ngIf="Transaction.status==-1">Cancelled</h6>
+            <h6 class="text-warning" *ngIf="Transaction.status==0">Pending</h6>
+        </div>
+        <div class="col-2 ">
+            ₹{{ Transaction.price }}
+        </div>
+    </div>
+</div>
+<app-bottombar></app-bottombar>

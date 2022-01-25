@@ -1,0 +1,32 @@
+<div class="w-100 vh-100 bg-white d-flex align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class=" h-50 col-12 text-center">
+                <h1 class="font-primary">RJ19 Car Wash</h1>
+            </div>
+            <div class=" h-50 col-12 text-center">
+                <h4>Your Order</h4>
+            </div>
+            <div class=" h-50 col-12 text-center" *ngIf="data != ''">
+                <table class="table border-1">
+                    <tr>
+                        <td>Name</td>
+                        <td>{{ data.name }}</td>
+                    </tr>
+                    <tr>
+                        <td>Service</td>
+                        <td>{{ service?.name }}</td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td>{{ data.amount/100 }} ₹</td>
+                    </tr>
+                </table>
+                <h1 class="font-primary">Thank you</h1>
+            </div>
+            <div class="md-3 h-50 mx-auto text-center p-5">
+                <button class="btn btn1 text-white" [routerLink]="(['/home'])">Go Home</button>
+            </div>
+        </div>
+    </div>
+</div>

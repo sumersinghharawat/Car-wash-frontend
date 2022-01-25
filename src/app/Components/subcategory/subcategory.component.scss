@@ -1,0 +1,26 @@
+.font-primary{
+    color: red;
+    font-size: 30px;
+}
+.category-icon{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.category-icon:active {
+    /* background: red; */
+    transform: translate(1px,2px);
+}
+.category-icon:focus {
+    background: red;
+    // transform: translate(1px,2px);
+}
+.category-icon img{
+    height: 180px;
+}
+*,a,button,h1,h2,h3,h4,h5,h6,label{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: bold;
+}

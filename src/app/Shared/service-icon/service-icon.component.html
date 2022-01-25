@@ -1,0 +1,20 @@
+<div class="card service-icon">
+    <!-- <img [src]="envi + SerivceImage" class="img-thumbnail img-fluid" /> -->
+    <div class="col-12">
+        <h2>{{ ServiceName }}</h2>
+    </div>
+    <div class="col-12">
+        <pre>{{ (ServiceDescription.length>150)? (ServiceDescription | slice:0:150)+'..':(ServiceDescription) }}</pre>
+    </div>
+    <div class="col-12">
+        <a [routerLink]="['/service',ServiceId]">Read more</a>
+    </div>
+    <div class="col-12">
+        <b *ngIf="ServiceDisPrice == ''">{{ ServicePrice }} ₹</b>
+        <b *ngIf="ServiceDisPrice != ''"><s>{{ ServicePrice }} ₹</s></b>
+        <b *ngIf="ServiceDisPrice != ''">{{ ServiceDisPrice }} ₹</b>
+    </div>
+    <div class="col-12">
+        <div class="btn btn1" (click)="bookNow($event)">Book Now</div>
+    </div>
+</div>

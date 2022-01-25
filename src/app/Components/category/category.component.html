@@ -1,0 +1,16 @@
+<div class="w-100 vh-100 bg-white d-flex align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 h-50 text-center p-5">
+                <h1 class="font-primary">RJ19 Car Wash Categories</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6" *ngFor="let category of categories" (click)="OnClick(category.id)">
+                <app-category-icon class="card category-icon m-2" [CategoryImage]="category.category_image"
+                    [CategoryName]="category.category_name"></app-category-icon>
+            </div>
+        </div>
+    </div>
+</div>
+<app-bottombar></app-bottombar>

@@ -1,0 +1,23 @@
+.service-icon {
+    padding: 15px;
+}
+.btn1{
+    background-color: red;
+    border-radius: 50px;
+    border: 0px solid #323232;
+    box-shadow: #000 2px 2px 4px;
+    padding: 5px 50px;
+    color: #fff;
+}
+.btn1:active{
+    transform: translate(1px, 2px);
+    box-shadow: #000 2px 2px 0px;
+    padding: 5px 50px;
+}
+.font-primary {
+    color: red;
+}
+*,a,button,h1,h2,h3,h4,h5,h6,label{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: bold;
+}
